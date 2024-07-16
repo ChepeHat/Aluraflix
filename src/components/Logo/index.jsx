@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import logo from '/img/aluraflix.svg'
+import logo from './aluraflix.svg'
 
 const LogoStyle = styled.img`
     height: 40px;

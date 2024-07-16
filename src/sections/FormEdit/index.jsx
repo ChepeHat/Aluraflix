@@ -31,6 +31,7 @@ const DivBotones = styled.div`
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    align-items: center;
 
         @media screen and (min-width: 768px) {
             scale: 1;

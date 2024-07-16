@@ -4,7 +4,7 @@ import BotonMain from "../../components/BotonMain"
 import { Link } from "react-router-dom"
 import { FaHome, FaPlus } from "react-icons/fa";
 
-import { HeaderStyle, Div } from './Header.styled.js'
+import { HeaderStyle, BotonHeader, Div } from './Header.styled.js'
 
 
 const Header = () => {
@@ -15,10 +15,16 @@ const Header = () => {
             </Link>
             <Div>
                 <Link to='/' >
-                    <BotonMain nombre='Home' icono={<FaHome size={40} />} /> 
+                    <BotonHeader>
+                        <FaHome className="icono" size={40} />
+                        <span className="texto">Home</span>
+                    </BotonHeader> 
                 </Link>
                 <Link to='/nuevo-video' >
-                    <BotonMain nombre='Nuevo video' icono={<FaPlus size={40} />} />
+                    <BotonHeader>
+                        <FaPlus className="icono" size={40}  />
+                        <span className="texto">Nuevo Video</span>
+                    </BotonHeader>
                 </Link>
             </Div>
         </HeaderStyle>

@@ -2,15 +2,17 @@ import styled from "styled-components"
 
 const BotonActivo = styled.button`
 
-    width: 54px;
+    width: 180px;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+
     height: 54px;
     background: none;
     cursor: pointer;
-    padding: 15px;
+
     font-weight: 900;
     font-size: 18px;
-    border-radius: 50%;
-    border: none;
     color: white;
     display: flex;
     align-items: center;
@@ -32,43 +34,11 @@ const BotonActivo = styled.button`
             text-decoration: none;
             
         }
-
-        @media (min-width: 730px) {
-            width: 180px;
-            padding: 0 20px;
-            border-radius: 10px;
-            border: 2px solid #fff;
-
-            & .icono {
-                display: none;
-            }
-
-            & .texto {
-                display: flex;
-                text-transform: uppercase;
-                text-decoration: none;
-            }
-    }
-`
-    const Icono = styled.span`
-        display: block;
-    `;
-
-    const Texto = styled.span`
-        display: none;
-        outline: none;
-
-        @media (min-width: 730px) {
-            display: block;
-    }
 `
 
-const BotonMain = ({nombre, type, icono }) => {
+const BotonMain = ({nombre, type }) => {
     return (
-        <BotonActivo type={type} >
-            <Icono className="icono">{icono}</Icono>
-            <Texto className="texto">{nombre}</Texto>
-        </BotonActivo>
+        <BotonActivo type={type} >{nombre}</BotonActivo>
     )
 }
 
